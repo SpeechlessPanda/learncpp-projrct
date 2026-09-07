@@ -1,0 +1,17 @@
+# 编译产物
+*.exe
+*.o
+*.obj
+*.out
+*.a
+*.lib
+*.pdb
+*.ilk
+*.dSYM/
+
+# IDE / 系统
+.vscode/
+.idea/
+*.user
+Thumbs.db
+.DS_Store
