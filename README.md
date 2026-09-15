@@ -31,6 +31,7 @@
   - [puzzle-15](#puzzle-15--十五数字推盘)
   - [monster-hunter](#monster-hunter--打怪升级)
 - [未收录的内容](#未收录的内容)
+- [相关项目](#相关项目)
 - [致谢](#致谢)
 
 ## 项目一览
@@ -334,6 +335,41 @@ Nice! You found all numbers, good job!
 
 三个类：`Creature` 基类，`Player` 和 `Monster` 派生。
 
+```mermaid
+classDiagram
+    class Creature {
+        +std::string m_name
+        +char m_symbol
+        +int m_health
+        +int m_damage
+        +int m_gold
+        +isDead() bool
+        +reduceHealth(int)
+    }
+    class Player {
+        +int m_level
+        +levelUp()
+        +drinkPotion(Potion)
+        +hasWon() bool
+    }
+    class Monster {
+        +enum Type
+        +Monster(Type)
+        +getRandomMonster()$ Monster
+    }
+    class Potion {
+        +enum Type
+        +enum Size
+        +getRandomPotion()$ Potion
+    }
+    Creature <|-- Player : 继承
+    Creature <|-- Monster : 继承
+    Monster o-- Creature : monsterData 静态表
+    Player ..> Potion : 喝下
+```
+
+`Monster` 不存自己的数据，而是引用一张 `inline static` 的 `Creature` 预设表（带 `static_assert` 校验数组与枚举数量一致）；`Potion` 与战斗系统解耦，只由 `Player::drinkPotion()` 消费。
+
 **玩家初始：** 符号 `@`，生命 10，伤害 1，金币 0，等级 1。升级时等级和伤害各 +1。到 **20 级** 获胜。
 
 **怪物表（教程原文）：**
@@ -393,6 +429,10 @@ Too bad you can't take it with you!
 | `8_15/` | 仅有 `Random.h`，已按需复制到各游戏目录 |
 | `17_x/3.cpp` | 空文件 |
 | `21_x/` | [21.x Q4 `FixedPoint2`](https://learncpp.cn/cpp-tutorial/chapter-21-summary-and-quiz/) 是定点类单元测试，不是可玩程序 |
+
+## 相关项目
+
+- **rustbook-project**（本机同级目录，尚未推送远程）：《Rust 程序设计语言》教程项目集，含 minigrep 与多线程 Web 服务器。两个仓库的 README 互相参考、徽章风格一致。
 
 ## 致谢
 
