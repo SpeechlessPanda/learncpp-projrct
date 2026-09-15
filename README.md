@@ -31,7 +31,6 @@
   - [puzzle-15](#puzzle-15--十五数字推盘)
   - [monster-hunter](#monster-hunter--打怪升级)
 - [未收录的内容](#未收录的内容)
-- [相关项目](#相关项目)
 - [致谢](#致谢)
 
 ## 项目一览
@@ -429,11 +428,6 @@ Too bad you can't take it with you!
 | `8_15/` | 仅有 `Random.h`，已按需复制到各游戏目录 |
 | `17_x/3.cpp` | 空文件 |
 | `21_x/` | [21.x Q4 `FixedPoint2`](https://learncpp.cn/cpp-tutorial/chapter-21-summary-and-quiz/) 是定点类单元测试，不是可玩程序 |
-
-## 相关项目
-
-- **rustbook-project**（本机同级目录，尚未推送远程）：《Rust 程序设计语言》教程项目集，含 minigrep 与多线程 Web 服务器。两个仓库的 README 互相参考、徽章风格一致。
-- [BlogForEveryone](https://github.com/SpeechlessPanda/BlogForEveryone)：面向新手的博客搭建与管理桌面应用（Electron + Vue 3）。
 
 ## 致谢
 
