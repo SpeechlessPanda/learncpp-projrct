@@ -433,6 +433,7 @@ Too bad you can't take it with you!
 ## 相关项目
 
 - **rustbook-project**（本机同级目录，尚未推送远程）：《Rust 程序设计语言》教程项目集，含 minigrep 与多线程 Web 服务器。两个仓库的 README 互相参考、徽章风格一致。
+- [BlogForEveryone](https://github.com/SpeechlessPanda/BlogForEveryone)：面向新手的博客搭建与管理桌面应用（Electron + Vue 3）。
 
 ## 致谢
 
