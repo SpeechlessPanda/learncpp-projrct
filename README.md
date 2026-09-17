@@ -1,4 +1,4 @@
-# LearnCpp 小项目集
+<h1 align="center">LearnCpp 小项目集</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++17" />
